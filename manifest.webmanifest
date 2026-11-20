@@ -1,6 +1,6 @@
 {
- "name": "나의 할 일",
- "short_name": "할 일",
+ "name": "Cactus Todo",
+ "short_name": "Todo",
  "start_url": "./",
  "scope": "./",
  "display": "standalone",
