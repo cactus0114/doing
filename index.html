@@ -428,6 +428,8 @@ textarea { min-height: 90px; font-size: 13px; font-family: ui-monospace, Menlo, 
   }
   function catBlock(c) {
     var items = itemsFor(c.id, cursor);
+       items = items.filter(function (t) { return !t.done; })
+       .concat(items.filter(function (t) { return t.done; }));
     var doneN = items.filter(function (t) { return t.done; }).length;
     var pill = h('div', { class: 'pill' },
       h('button', { class: 'cname', type: 'button', style: 'color:' + c.color, 'aria-label': c.name + ' 편집', onclick: function () { openCatSheet(c); } }, c.name),
